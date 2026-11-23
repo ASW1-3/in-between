@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0a1020">
-<meta name="description" content="A small corner of the internet — learning, creating, wandering, and figuring things out.">
-<title>IN BETWEEN — Personal Space</title>
+<meta name="description" content="A personal corner of the internet belonging to Ageng Sabrina Wulandari — learning, creating, wandering, and figuring things out.">
+<title>Ageng Sabrina Wulandari — IN BETWEEN</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap');
 :root{
@@ -48,6 +48,19 @@ header.scrolled{border-color:var(--line);background:rgba(8,11,19,.88)}
 .scroll-hint{display:flex;align-items:center;gap:12px}
 .scroll-hint:after{content:"";height:1px;width:45px;background:var(--line)}
 .time{opacity:.7}
+
+.hero-grid{width:100%;display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:60px}
+.intro-label{font:11px "DM Mono",monospace;letter-spacing:.16em;color:var(--muted);margin:24px 0 0}
+.hero h1.name-title{font-size:clamp(48px,7vw,92px);line-height:.98;letter-spacing:-.075em;margin:12px 0 22px;font-weight:700}
+.hero h1.name-title .line2{display:block;background:linear-gradient(100deg,#7794d3 5%,#9a6c91 55%,#b16a7d);-webkit-background-clip:text;background-clip:text;color:transparent}
+.profile-card{border:1px solid var(--line);border-radius:5px;padding:26px;background:linear-gradient(150deg,rgba(23,38,74,.38),rgba(84,28,44,.17));box-shadow:0 25px 70px rgba(0,0,0,.16);position:relative;overflow:hidden}
+.profile-card:before{content:"";position:absolute;right:-70px;top:-95px;width:210px;height:210px;border-radius:50%;background:var(--blue2);filter:blur(70px);opacity:.22}
+.profile-card-top{display:flex;justify-content:space-between;font:10px "DM Mono",monospace;letter-spacing:.12em;color:var(--muted)}
+.profile-monogram{width:86px;height:86px;border:1px solid rgba(180,195,230,.28);border-radius:50%;display:grid;place-items:center;font-size:36px;font-weight:300;color:#c3d0ee;margin:32px 0 20px;background:linear-gradient(145deg,rgba(23,38,74,.65),rgba(84,28,44,.45));position:relative}
+.profile-monogram span{color:var(--red)}.profile-name{font-size:18px;font-weight:600;letter-spacing:-.03em}.profile-caption{color:var(--muted);font-size:12px;margin-top:4px}
+.profile-details{margin-top:24px;border-top:1px solid var(--line)}.profile-details div{padding:13px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:4px}.profile-details span{font:9px "DM Mono",monospace;letter-spacing:.13em;color:var(--muted)}.profile-details strong{font-size:12px;font-weight:500;color:#d4d9e6}
+.profile-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px}.profile-tags span{font:9px "DM Mono",monospace;color:#b7c3df;border:1px solid var(--line);border-radius:3px;padding:6px 7px}
+
 section{padding:110px 0;position:relative}
 .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:25px;margin-bottom:55px}
 .section-no{font:11px "DM Mono",monospace;color:var(--accent2);letter-spacing:.12em}
@@ -109,6 +122,8 @@ footer{padding:30px 0 38px;border-top:1px solid var(--line);display:flex;justify
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .75s ease,transform .75s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 @media(max-width:800px){
+ .hero-grid{grid-template-columns:1fr;gap:36px}
+ .profile-card{max-width:560px}
  .about-grid{grid-template-columns:1fr;gap:30px}
  .interests{grid-template-columns:1fr 1fr}
  .section-head{align-items:flex-start;flex-direction:column}
@@ -116,6 +131,9 @@ footer{padding:30px 0 38px;border-top:1px solid var(--line);display:flex;justify
  .timeline-item{grid-template-columns:115px 1fr;gap:20px}
 }
 @media(max-width:600px){
+ .hero-grid{gap:28px}
+ .hero h1.name-title{font-size:clamp(45px,13vw,72px)}
+ .profile-card{padding:22px}
  .wrap{width:min(var(--max),calc(100% - 32px))}
  .nav{height:66px}
  .menu-btn{display:block}
@@ -150,14 +168,21 @@ footer{padding:30px 0 38px;border-top:1px solid var(--line);display:flex;justify
 
 <main>
 <section class="hero wrap" id="home">
-  <div class="hero-content reveal">
-    <div class="eyebrow">A PERSONAL SPACE · OPEN FOR CURIOSITY</div>
-    <h1>Somewhere<span class="line2">in between.</span></h1>
-    <p class="hero-desc">Learning, creating, wandering, and figuring things out. A little corner of the internet where I collect the things I discover along the way.</p>
-    <div class="hero-actions">
-      <a class="btn primary" href="#about">EXPLORE <span>↘</span></a>
-      <a class="btn" href="#contact">SAY HELLO <span>↗</span></a>
+  <div class="hero-grid">
+    <div class="hero-content reveal">
+      <div class="eyebrow">A PERSONAL SPACE · OPEN FOR CURIOSITY</div>
+      <p class="intro-label">HELLO, I'M</p>
+      <h1 class="name-title">Ageng Sabrina<span class="line2">Wulandari.</span></h1>
+      <p class="hero-desc">A curious soul navigating life, technology, and everything in between. Learning, creating, wandering, and figuring things out — one step at a time.</p>
+      <div class="hero-actions"><a class="btn primary" href="#about">GET TO KNOW ME <span>↘</span></a><a class="btn" href="#projects">MY PROJECTS <span>↗</span></a></div>
     </div>
+    <aside class="profile-card reveal">
+      <div class="profile-card-top"><span>PERSONAL PROFILE</span><span>01 / 01</span></div>
+      <div class="profile-monogram">A<span>.</span></div>
+      <div class="profile-name">Ageng Sabrina Wulandari</div><div class="profile-caption">Still becoming. Always curious.</div>
+      <div class="profile-details"><div><span>FOCUS</span><strong>Learning & exploring</strong></div><div><span>INTERESTS</span><strong>Technology · Languages · Creativity</strong></div><div><span>PERSONAL MOTTO</span><strong>Take your time. Keep going.</strong></div></div>
+      <div class="profile-tags"><span>IT & TECHNOLOGY</span><span>LANGUAGES</span><span>CREATIVE EXPLORATION</span></div>
+    </aside>
   </div>
   <div class="hero-bottom"><div class="scroll-hint">SCROLL TO EXPLORE</div><div class="time" id="clock">LOCAL TIME · --:--</div></div>
 </section>
